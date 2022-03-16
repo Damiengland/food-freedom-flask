@@ -79,7 +79,7 @@ class User(UserMixin, db.Model):
 
 
 # Only needs to be executed once.
-# db.create_all()
+db.create_all()
 
 
 # Extra security measure ensuring only the admin has editing permission
