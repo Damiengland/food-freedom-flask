@@ -61,9 +61,9 @@ class Recipe(db.Model):
     __tablename__ = "recipes"
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80), nullable=False)
-    desc = db.Column(db.String(200), nullable=False)
-    ingredients = db.Column(db.String(1000), nullable=False)
-    method = db.Column(db.String(1000), nullable=False)
+    desc = db.Column(db.String(1500), nullable=False)
+    ingredients = db.Column(db.String(1500), nullable=False)
+    method = db.Column(db.String(1500), nullable=False)
     image = db.Column(db.String(400), nullable=True)
 
     def __repr__(self):
