@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+{% include "nav.html" %}
+
+<div id="recipes">
+
+    <div class="center-container side-margin">
+
+        <h1 class="element-title top-pad">Recipes</h1>
+
+        <div class="recipe-cards">
+
+            <div class="row">
+
+                {% for recipe in recipes %}
+                    <div class="recipe col-xl-3 col-lg-4 col-md-6 col-sm-12">
+
+                        <a href="{{ url_for('recipe_item', id=recipe.id) }}"><img class="card-img-top border-shadow corner-r border-hover" src="{{ recipe.image }}" alt="Card image cap"></a>
+                        <h5>{{ recipe.name }}</h5>
+
+                    </div>
+                {% endfor %}
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

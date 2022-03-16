@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% include "nav.html" %}
+
+<div class="side-margin">
+        <div class="top-pad">
+
+                <div id="recipe-item" class="border-shadow-green corner-r">
+
+                        <img class="card-img-top" src="{{ recipe.image }}" alt="Card image cap">
+
+                        <div id="print-section">
+                                <h2>{{ recipe.name }}</h2>
+
+                                <p>{{ recipe.desc }}</p>
+
+                                <h3>Ingredients</h3>
+                                {% for row in recipe.ingredients.split("\n") %}
+                                <p>- {{ row }}</p>
+                                {% endfor %}
+
+                                <h3>Method</h3>
+                                {% for row in recipe.method.split("\n") %}
+                                <p>{{ row }}</p>
+                                {% endfor %}
+
+                        </div>
+
+                        <i id="print" class="fa-solid fa-print fa-2xl" onclick='printDiv();'></i>
+
+                </div>
+        </div>
+
+</div>
+
+{% endblock %}

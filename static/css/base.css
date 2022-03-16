@@ -1,0 +1,578 @@
+/* CSS VARIABLES */
+:root {
+    --main-color: #9ebb9e;
+    --secondary-color: #58585a;
+    --white-smoke: #f6f9f6;
+    --corner-r: 8px;
+}
+
+
+/* BASE WEBSITE SETTINGS */
+body {
+    font-family: 'Oxygen', sans-serif;
+    color: var(--secondary-color)
+}
+
+section {
+    height: 100vh;
+}
+
+
+/* FONTS */
+
+h1 {
+    font-family: 'MuseoModerno', cursive;
+    font-size: 2.5rem;
+    color: var(--main-color);
+    margin: 0;
+    font-weight: 500;
+}
+
+h2 {
+    font-family: 'MuseoModerno', cursive;
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: var(--main-color);
+    font-weight: 400;
+
+}
+h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: capitalize;
+    color: var(--main-color);
+}
+h4 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: var(--main-color);
+    font-weight: 600;
+    margin: 0;
+}
+h5 {
+    font-family: 'MuseoModerno', cursive;
+    text-transform: capitalize;
+    color: var(--secondary-color);
+    font-weight: 400;
+    padding: 1rem 0;
+}
+h6 {
+
+}
+p {
+    text-align: justify;
+}
+
+
+/* GLOBAL */
+body {
+    /* background-image: url("../images/cream_dust.png"); */
+    color: var(--secondary-color);
+}
+
+.no-a-styles, .no-a-styles:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+.side-margin {
+    padding: 1rem 6rem;
+}
+
+.top-pad {
+    padding-top: 125px;
+}
+
+.center-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.element-spacing {
+    margin-bottom: 2rem;
+}
+
+.element-title {
+    text-align: center;
+    padding-bottom: 4rem;
+}
+
+.p-padding {
+    padding-top: 1.5rem;
+}
+
+.corner-r {
+    border-radius: var(--corner-r);
+}
+
+.border-shadow {
+    border: 4px solid white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+.border-shadow-green {
+    border: 4px solid var(--main-color);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+
+.btn {
+    width: 100%;
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
+}
+.btn:hover {
+    color: white;
+    background: var(--main-color);
+}
+
+
+
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    justify-content: space-between
+}
+.navbar-brand h1 {
+    font-size: 3.5rem;
+}
+
+.nav-menu {
+    display: flex;
+}
+.nav-item h3 {
+    margin: 0;
+}
+.sr-nav {
+    padding: 0.5rem 0 0.5rem 1rem;
+}
+
+.socials {
+    position: fixed;
+    bottom: 100px;
+    padding: 0.5rem;
+    z-index: 10;
+}
+.instagram, .facebook {
+    background: white;
+    width: 60px;
+    height: 60px;
+    margin: 0.5rem 0;
+    transition: all 0.5s
+}
+.instagram i, .facebook i {
+    position: relative;
+    color: var(--main-color);
+    width: 22px;
+    text-align: center;
+    top: 25%;
+    left: 15.5px;
+}
+
+.tag {
+    position: relative;
+    bottom: 10px;
+    left: 50px;
+    opacity: 0;
+}
+
+.logo-side {
+    width: 400px;
+    font-weight: 200;
+    font-size: 4rem;
+    text-align: center;
+    position: fixed;
+    right: 0;
+    transform: rotate(-90deg);
+    margin-right: -175px;
+    bottom: 200px;
+}
+
+
+/* FOOTER */
+footer {
+    margin: 2rem 0 ;
+    opacity: 0.5;
+}
+.f-m img {
+    width: 50%;
+    margin: auto;
+}
+.f-r {
+    text-align: right;
+}
+footer .col-sm-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+footer a h6:hover {
+    color: var(--main-color);
+}
+
+
+
+/* SECTION - BANNER */
+
+#banner {
+    height: 100vh;
+    background-image: url("../images/home-banner.png");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+/* SECTION - EQUATION */
+
+.equation {
+    text-align: center;
+}
+
+.eq-items {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-top: 2rem;
+
+}
+.item-info {
+    height: 100%;
+    background: var(--white-smoke);
+    padding: 1rem;
+    border-radius: var(--corner-r);
+
+}
+
+.collapse-info {
+    display: none;
+    opacity: 0;
+}
+
+.collapse-info p {
+    padding-top: 1rem;
+    text-align: center;
+}
+.down {
+    position: relative;
+    top: 20px;
+    margin: 2rem 0;
+    color: var(--main-color);
+}
+.expand {
+    display: block;
+    opacity: 1;
+}
+
+
+
+/* SECTION - ABOUT & FOOD */
+
+#section-3 .row {
+    height: calc(0.8 * 100vh);
+
+}
+
+.about-overview {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1rem 4rem;
+}
+.about-overview h6 {
+    opacity: 0.5;
+}
+
+.food-grid {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 5px 5px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "food-1 food-2"
+    "food-3 food-4";
+}
+
+.food-1 {
+    grid-area: food-1;
+    background-image: url("../images/food/lentil-patties.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.food-2 {
+    grid-area: food-2;
+    background-image: url("../images/food/seed-bread.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.food-3 {
+    grid-area: food-3;
+    background-image: url("../images/food/grain-free-rolls.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.food-4 {
+    grid-area: food-4;
+    background-image: url("../images/food/pumpkin-brownies.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.description {
+    position: relative;
+    height: calc(100%);
+    display: block;
+    text-align: center;
+    background: rgba(255,255,255,0.75);
+    opacity: 0;
+    transition: all .2s;
+}
+
+.description h5 {
+    position: relative;
+    margin: 0;
+    top: calc(50% - 19.2px);
+}
+
+
+/* SECTION 4 */
+
+#section-4, #section-4 p {
+    text-align: center;
+}
+
+.plan-card {
+    padding: 2.5rem;
+    background: var(--white-smoke);
+    transition: all 0.5s;
+}
+
+
+/* RECIPE - HOME */
+.recipe-cards .col-md-auto {
+    margin-bottom: 1rem;
+}
+
+.recipe {
+    height: 460px;
+    text-align: center;
+}
+
+.recipe img {
+    transition: all .5s;
+}
+
+
+
+/* RECIPE ITEM - PAGE */
+
+#recipe-item {
+    margin: 0 15%;
+    padding: 2rem 4rem;
+}
+
+#recipe-item img {
+    width: 400px;
+    float: right;
+    margin-left: 2rem;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    border: 4px solid white;
+}
+
+#recipe-item h3 {
+    padding: 1rem 0;
+}
+
+#print {
+    color: var(--secondary-color);
+    padding: 2rem 0;
+}
+
+
+/* CONTACT - PAGE */
+#contact .card {
+    height: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+    background: var(--white-smoke);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    border: 4px solid white;
+}
+#contact .row {
+    width: 100%;
+}
+
+#contact .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#contact img {
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+    margin-left: 2rem;
+    float: right;
+}
+
+#contact .form-group {
+    padding: 0 0 2rem;
+}
+
+#contact textarea.form-control {
+    min-height: 100px;
+}
+
+
+/* ABOUT - PAGE */
+.div-img {
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.about-img-1 { background-image: url("../images/about-img-2.png"); }
+.about-img-2 { background-image: url("../images/about-img-1.png"); }
+.about-img-3 { background-image: url("../images/about-img-3.png"); }
+
+#about .col-md-6 {
+    min-height: 400px;
+}
+#about .row {
+    background: var(--white-smoke);
+}
+#about .col-4 {
+    padding: 0;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem;
+
+}
+
+
+/* WEIGHT LOSS - PAGE */
+#weight h1 {
+    text-align: center
+}
+
+#weight .plan {
+    padding: 0;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    border: 4px solid var(--main-color);
+}
+#weight .plan div {
+    padding: 4rem 4rem 0;
+}
+
+#weight .row {
+    background: var(--white-smoke);
+}
+
+#weight a {
+    border-top: 4px solid var(--main-color);
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    background: var(--main-color);
+    color: white;
+    border-radius: 0;
+    margin: 2rem 0 0;
+    padding: 0.5rem;
+    transition: all .5s
+
+}
+
+#weight a:hover {
+    padding: 1rem;
+}
+
+
+/* ADMIN - PAGES */
+
+#admin div {
+    display: flex;
+}
+#admin .btn {
+    margin: 0 2rem;
+    width: 150px;
+}
+
+
+
+/* LOGIN */
+.flash {
+    color: red;
+    text-align: center;
+}
+
+
+/* SELECT */
+#select {
+    text-align: center;
+}
+#select h1 {
+    padding: 2rem;
+}
+#select .btn {
+    width: 50%;
+    margin: 0.5rem;
+}
+
+
+/* ADD */
+
+.form-group {
+    padding: 1rem 0;
+}
+
+
+/* STATES */
+
+.description:hover {
+    opacity: 1;
+}
+
+.border-hover:hover {
+    border: 4px solid var(--main-color);
+}
+
+.dark-hover:hover {
+    color: #638171;
+}
+
+.instagram:hover, .facebook:hover {
+    width: 220px;
+}
+
+.show-tag {
+    opacity: 0.7;
+    transition-property: opacity;
+    transition-delay: 0.3s;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.5s;
+}
+
+
+

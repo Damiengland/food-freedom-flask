@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block content %}
+
+    <div id="add-form" class="side-margin">
+        <h1>Food Freedom</h1>
+        <h5>ADD</h5>
+
+        {{ wtf.quick_form(form) }}
+    </div>
+
+{% endblock %}

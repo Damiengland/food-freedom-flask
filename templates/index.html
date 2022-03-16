@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section id="banner" class="sect element-spacing">
+
+    {% include "nav.html" %}
+
+</section>
+
+<div class="equation element-spacing side-margin">
+
+    <div class="row">
+        <h1>Weight Loss Equation</h1>
+    </div>
+
+    <div class="row eq-items">
+
+        <div class="item col-lg-3 col-md-6">
+            <div class="item-info">
+                <h4>Food Timing</h4>
+
+                <div class="collapse-info">
+                    <p>
+                        Periods of fasting in your daily eating plan can have major health benefits.
+                        It allows your body time to undergo other metabolic processes and give your digestive system a break.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="item col-lg-3 col-md-6">
+            <div class="item-info">
+                <h4>Inflammation</h4>
+                <div class="collapse-info">
+                    <p>
+                        Many of us carry a huge amount of systemic inflammation and one of many triggers can be food.
+                        Not all foods suit all people and finding the culprits can have a huge impact on your well-being.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="item col-lg-3 col-md-6">
+            <div class="item-info">
+                <h4>Microbiome</h4>
+                <div class="collapse-info">
+                    <p>Creating a microbiome that is abundant in good bacteria and low in bad bacteria can be achieved by incorporating diversity in our food choices.</p>
+                </div>
+            </div>
+        </div>
+        <div class="item col-lg-3 col-md-6">
+            <div class="item-info">
+                <h4>Macronutrients</h4>
+                <div class="collapse-info">
+                    <p>Understanding the proportions of food groups that are required to allow your body to shed extra kilos.</p>
+                </div>
+            </div>
+        </div>
+
+        <i class="down fa-solid fa-chevron-down fa-2xl"></i>
+
+    </div>
+
+</div>
+
+
+<div id="section-3" class="center-container element-spacing side-margin">
+
+        <div class="row">
+
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="food-grid">
+
+                    <div class="food-1 border-shadow corner-r">
+                        <a class="no-a-styles" href="{{ url_for('recipe_item', id=4) }}">
+                            <span class="description"><h5>Lentil Patties</h5></span>
+                        </a>
+                    </div>
+                    <div class="food-2 border-shadow corner-r">
+                        <a class="no-a-styles" href="{{ url_for('recipe_item', id=2) }}">
+                            <span class="description"><h5>Seed Bread</h5></span>
+                        </a>
+                    </div>
+                    <div class="food-3 border-shadow corner-r">
+                        <a class="no-a-styles" href="{{ url_for('recipe_item', id=1) }}">
+                            <span class="description"><h5>Grain Free Rolls</h5></span>
+                        </a>
+                    </div>
+                    <div class="food-4 border-shadow corner-r">
+                        <a class="no-a-styles" href="{{ url_for('recipe_item', id=8) }}">
+                            <span class="description"><h5>Peanut Butter & Pumpkin Brownies</h5></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-12 col-sm-12 about-overview">
+                <h1>About</h1>
+                <h6>Karen England</h6>
+                <p class="p-padding">
+                    How would you define your foodie self?<br/>
+                    Meat eater, vegan/vegetarian, plant based or paleo - list goes on but does it really matter?
+                    What matters is that you find an eating plan that allows you to thrive, have bundles of energy,
+                    maintain a healthy body weight and feel happy most of the time.
+                    I like to embrace an individual’s own personal food preference and belief systems.
+                    My focus is on foods that are mostly gluten-free, lower in carbohydrates, friendly on your gut and keep you happy.
+                </p>
+            </div>
+
+        </div>
+
+</div>
+
+<div id="section-4" class="side-margin">
+    <div class="row">
+        <div class="col-md-12 col-lg-6">
+            <a class="no-a-styles" href="{{ url_for('weight_loss') }}">
+                    <div class="plan-card corner-r border-shadow border-hover">
+                    <h2>Freedom Plan</h2>
+                    <p class="p-padding">
+                        This 4 week weight loss program at Food Freedom offers easy to follow guidelines and meal plans.
+                        Ongoing support and guidance throughout the program allowing you to stay on track and ultimately achieve your goals.
+                    </p>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-12 col-lg-6">
+            <a class="no-a-styles" href="{{ url_for('weight_loss') }}">
+                <div class="plan-card corner-r border-shadow border-hover">
+                    <h2>HCG Plan</h2>
+                    <p class="p-padding">
+                        The HCG diet is designed to allow your body to use its own fat stores as fuel and to achieve rapid weight loss without hunger.
+                        The program allows you to detox in a natural way and reset your metabolism.
+                    </p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

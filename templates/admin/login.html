@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block content %}
+<section id="login" class="sect center-container">
+
+    <h1>Food Freedom</h1>
+    <div class="side-margin">
+
+        {{ wtf.quick_form(form) }}
+
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p class="flash">{{ message }}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+    </div>
+
+</section>
+{% endblock %}

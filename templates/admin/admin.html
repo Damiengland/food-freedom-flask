@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section id="admin" class="sect center-container">
+
+    <h1 class="side-margin">Food Freedom</h1>
+    <div class="side-margin">
+
+        <a href="{{ url_for('add') }}" type="button" class="btn btn-lg">ADD</a>
+        <a href="{{ url_for('select') }}" type="button" class="btn btn-lg">UPDATE</a>
+
+    </div>
+
+</section>
+{% endblock %}

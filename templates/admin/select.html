@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div id="select" class="center-container">
+
+    <h1>Food Freedom</h1>
+
+    <div class="recipe-cards side-margin">
+
+        <div class="row row-cols-xl-4 row-cols-lg-3 row-cols-md-2">
+
+            {% for recipe in recipes %}
+            <div class="col-md-auto">
+                <div class="card border-shadow corner-r">
+                    <h5 class="card-title">{{ recipe.name }}</h5>
+                    <div class="card-body">
+                        <a href="{{ url_for('edit', id=recipe.id) }}" type="button" class="btn">EDIT</a>
+                        <a href="{{ url_for('delete', id=recipe.id) }}" type="button" class="btn">DELETE</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock %}

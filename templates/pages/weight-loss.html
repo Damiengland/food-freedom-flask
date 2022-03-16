@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% include "nav.html" %}
+
+<div id="weight" class="side-margin">
+
+    <h1 class="element-title top-pad">Weight Loss</h1>
+
+    <div class="row corner-r">
+
+        <div class="info col-lg-6 col-md-12">
+
+            <h2>What is HCG?</h2>
+            <p class="p-padding">
+                The HCG Diet was designed by Dr Simeon in the 1950’s.<br/>
+                Dr Simeon figured out that we have three different types of fat - structural fat, normal reserve fat and abnormal fat.
+                He figured out a way for the body to move the abnormal fat and not the other essential types of fat.
+                This is why weight loss is rapid and whilst you are only consuming 500 calories from food your body uses approximately 2,500 calories per day from your abnormal fat stores.
+            </p>
+
+        </div>
+
+        <div class="plan col-lg-6 col-md-12 corner-r">
+            <div>
+                <h1>HCG Plan</h1>
+                <p class="p-padding">
+                    The HCG diet is designed to allow your body to use its own fat stores as fuel and to achieve rapid weight loss without hunger.
+                    The program allows you to detox in a natural way and reset your metabolism.
+                </p>
+                <h5>Included in the 4 week program</h5>
+                <ul>
+                    <li>Initial 60 minutes consultation</li>
+                    <li>Follow-up consult</li>
+                    <li>Maintenance consult</li>
+                    <li>Full program booklet (hard copy or digital)</li>
+                    <li>HCG Homeopathic drops</li>
+                    <li>Additional Online assistance throughout program (if required)</li>
+                </ul>
+            </div>
+
+            <a href="{{ url_for('contact') }}" type="button" class="btn">ENQUIRE NOW</a>
+
+        </div>
+
+    </div>
+
+<!--    <div class="row">-->
+<!--        <div class="col-sm-6 col-md-3">-->
+<!--            <h3>PHASE 1 - Loading</h3>-->
+<!--        </div>-->
+<!--        <div class="col-sm-6 col-md-3">-->
+<!--            <h3>PHASE 2 - Reducing</h3>-->
+<!--        </div>-->
+<!--        <div class="col-sm-6 col-md-3">-->
+<!--            <h3>PHASE 3 - Transition</h3>-->
+<!--        </div>-->
+<!--        <div class="col-sm-6 col-md-3">-->
+<!--            <h3>PHASE 4 - Maintenance</h3>-->
+<!--        </div>-->
+<!--    </div>-->
+
+    <div class="row corner-r">
+
+        <div class="plan col-lg-6 col-md-12 corner-r">
+            <div>
+                <h1>Freedom Plan</h1>
+                <p class="p-padding">
+                    This 4 week weight loss program at Food Freedom offers easy to follow guidelines and meal plans.
+                    Ongoing support and guidance throughout the program allowing you to stay on track and ultimately achieve your goals.
+                </p>
+                <h5>Included in the 4 week program</h5>
+                <ul>
+                    <li>Initial 60 minutes consultation</li>
+                    <li>3 x 30 minutes follow up consultations</li>
+                    <li>Full program booklet (hard copy or digital)</li>
+                    <li>Exclusive recipes and meal ideas</li>
+                    <li>Additional Online assistance throughout program (if required)</li>
+                </ul>
+            </div>
+
+            <a href="{{ url_for('contact') }}" type="button" class="btn">ENQUIRE NOW</a>
+
+
+        </div>
+
+        <div class="info col-lg-6 col-md-12">
+
+            <h2>What is my role?</h2>
+            <p class="p-padding">
+                For many weight loss can be a simple as adding a bit more exercise and eating a bit less.
+                But for many more of us it is a much more difficult equation that can cause a lifetime of anxiety and sadness.<br/>
+                My job is to take the guess work out of the process, take control of the situation and ultimately help you reach your goals.
+                My focus is to teach you the tools to achieve sustainable and permanent weight loss.
+                These are a few key considerations that are incorporated in the program.
+            </p>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+{% endblock %}
