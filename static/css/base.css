@@ -360,6 +360,7 @@ footer a h6:hover {
     padding: 2.5rem;
     background: var(--white-smoke);
     transition: all 0.5s;
+    height: 100%;
 }
 
 

@@ -48,7 +48,7 @@ def send_email(name, from_addr, message):
     with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
         connection.starttls()  # Secures connection
         connection.login(user=send_addr, password=email_pass)
-        connection.sendmail(from_addr=send_addr, to_addrs="damien.england@icloud.com",
+        connection.sendmail(from_addr=send_addr, to_addrs="karen.england@optusnet.com.au",
                             msg=f"Subject:Contact form: {name}\n\n"
                                 f"NAME: {name}\n"
                                 f"EMAIL: {from_addr}\n"
