@@ -23,7 +23,7 @@
 
                                 {% for row in recipe.ingredients.split("\n") %}
                                 {% if "//" is in row %}
-                                        <h5>{{ row.split("//")[1] }}</h5>
+                                        <p><strong>{{ row.split("//")[1] }}</strong></p>
                                 {% else %}
                                         <p>- {{ row }}</p>
                                 {% endif %}
