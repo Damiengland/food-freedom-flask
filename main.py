@@ -82,6 +82,18 @@ class User(UserMixin, db.Model):
 db.create_all()
 
 
+# convert Google image url to viewable image url
+def convert_url(url):
+    image = url
+    split_url = image.split("/")
+    try:
+        converted_image = f"https://drive.google.com/uc?export=view&id={split_url[5]}"
+    except IndexError:
+        converted_image = image
+
+    return converted_image
+
+
 # Extra security measure ensuring only the admin has editing permission
 def admin_only(f):
     @wraps(f)
@@ -170,19 +182,14 @@ def add():
     form = AddRecipeForm()
     if form.validate_on_submit():
 
-        image = form.image.data
-        split_url = image.split("/")
-        try:
-            converted_image = f"https://drive.google.com/uc?export=view&id={split_url[5]}"
-        except IndexError:
-            converted_image = image
+        image = convert_url(form.image.data)
 
         new_recipe = Recipe(
             name=form.name.data,
             desc=form.desc.data,
             ingredients=form.ingredients.data,
             method=form.method.data,
-            image=converted_image
+            image=image
         )
         db.session.add(new_recipe)
         db.session.commit()
@@ -219,11 +226,13 @@ def edit():
 
     if form.validate_on_submit():
 
+        image = convert_url(form.image.data)
+
         recipe.name = form.name.data
         recipe.desc = form.desc.data
         recipe.ingredients = form.ingredients.data
         recipe.method = form.method.data
-        recipe.image = form.image.data
+        recipe.image = image
 
         db.session.commit()
 

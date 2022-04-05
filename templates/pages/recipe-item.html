@@ -17,8 +17,16 @@
                                 <p>{{ recipe.desc }}</p>
 
                                 <h3>Ingredients</h3>
+<!--                                {% for row in recipe.ingredients.split("\n") %}-->
+<!--                                <p>- {{ row }}</p>-->
+<!--                                {% endfor %}-->
+
                                 {% for row in recipe.ingredients.split("\n") %}
-                                <p>- {{ row }}</p>
+                                {% if "//" is in row %}
+                                        <h5>{{ row.split("//")[1] }}</h5>
+                                {% else %}
+                                        <p>- {{ row }}</p>
+                                {% endif %}
                                 {% endfor %}
 
                                 <h3>Method</h3>
